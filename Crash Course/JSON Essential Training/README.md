@@ -1,7 +1,7 @@
 ## JSON Essential Training — Sasha Vodnik
 
 <a href="https://www.linkedin.com/learning/json-essential-training">
-<img src="https://i.ibb.co/2dWWfkk/image.png" alt="json-training">
+<img src="https://files.catbox.moe/gxefso.png" alt="json-training">
 </a>
 
 ### JSON Variants
