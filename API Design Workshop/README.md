@@ -1,7 +1,5 @@
 <a href="https://www.youtube.com/playlist?list=PL_XxuZqN0xVAWGDKIzcn6NWikVkljJQZc"> <img src="https://i.ibb.co/KqswBh7/image.png" alt="rest-api-design-workshop"> </a>
 
-## API Basics
-
 ### API Definition
 
 An API is a contract between two parties:
