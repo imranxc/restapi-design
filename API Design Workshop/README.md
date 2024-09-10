@@ -1,44 +1,48 @@
-<a href="https://www.youtube.com/playlist?list=PL_XxuZqN0xVAWGDKIzcn6NWikVkljJQZc"> <img src="https://i.ibb.co/KqswBh7/image.png" alt=""> </a>
+<a href="https://www.youtube.com/playlist?list=PL_XxuZqN0xVAWGDKIzcn6NWikVkljJQZc"> <img src="https://i.ibb.co/KqswBh7/image.png" alt="rest-api-design-workshop"> </a>
 
-API is a Contract between 2 parties.
+## API Basics
 
-- Consumer
-- Producer
+### API Definition
+
+An API is a contract between two parties:
+
+* **Consumer**: The entity that consumes or uses the API.
+* **Producer**: The entity that creates or provides the API.
 
 ### API Architectural Style
 
-- SOAP
-- REST
-- gRPC
-- Web hook
-- GraphQL
+* SOAP (Simple Object Access Protocol)
+* REST (Representational State Transfer)
+* gRPC (Remote Procedure Calls)
+* Web Hooks
+* GraphQL
 
-### Why API Design is Important?
+### Importance of API Design
 
-- Interoperability
-- Abstraction
-- Reusability
-- Adaptability
-- Developer Experience
-- Security & Reliability
+* Interoperability
+* Abstraction
+* Reusability
+* Adaptability
+* Developer Experience
+* Security & Reliability
 
 ### Public Docs
 
 > API first approach priorities APIs at the beginning of the software development process.
 
-- https://woocommerce.github.io/woocommerce-rest-api-docs/
-- https://docs.github.com/en/rest/
-- https://developer.spotify.com/documentation/web-api
+* https://woocommerce.github.io/woocommerce-rest-api-docs/
+* https://docs.github.com/en/rest/
+* https://developer.spotify.com/documentation/web-api
 
-### Different types of API Consumers
+### Types of API Consumers
 
-- Public
-- Private
-- Partner (privately shared between 2 parties)
+* **Public**: Open to anyone.
+* **Private**: Restricted to internal use.
+* **Partner**: Shared privately between two parties.
 
-### Life Cycle of an API
+### API Life Cycle
 
-![api-life-cycle](https://voyager.postman.com/infographics/producer-consumer-api-lifecycle-postman.png)
+![API Life Cycle](https://voyager.postman.com/infographics/producer-consumer-api-lifecycle-postman.png)
 
 ## What is API Design?
 
@@ -46,51 +50,49 @@ API design is the process of making intentional decisions about how an API will 
 
 #### Design Process
 
-Step 1: Determine what the API is intended to do   
-Step 2: Define the API contract with a specification   
-Step 3: Validate your assumptions with mocks and tests   
-Step 4: Document the API  
+* Define what the API is intended to do.
+* Create a specification outlining the API’s endpoints, methods, and data formats.
+* Use mocks and tests to ensure the API behaves as expected.
+* Provide clear documentation for developers to understand and use the API.
 
 ### What is your API?
 
-- REST API
-- REST like API
-
-> To become a good developer, you've to understand business domain very well.
+* REST API
+* REST like API
 
 ### What is REST API?
 
 REST stands for *Representational State Transfer* and API stands for *Application Programming Interface*. It's an architectural style for networked applications, defining principles for resource identification, addressing, and data exchange between clients and servers via HTTP.
 
-- A resource is any data object or entity that can be accessed or manipulated through rest API.
-- Representational state - it represents the current state of the resources. Representation can be XML, JSON etc
+* **Resource**: Any data object or entity that can be accessed or manipulated through rest API.
+* **Representational State**: Represents the current state of resources, which can be in formats like XML or JSON.
 
 ### Constraints of REST API
 
-- Client-Server
-- Cacheability (cache control header)
-- Uniform Interface
-	- Identification of resources
-	- Manipulation of resources through representations
-	- Self descriptive messages
-	- HATEOAS
-- Layered System
-- Code-on-demand
-- Statelessness
+* Client-Server
+* Cacheability (cache control header)
+* Uniform Interface
+	* Identification of resources
+	* Manipulation of resources through representations
+	* Self descriptive messages
+	* HATEOAS (Hypermedia As The Engine Of Application State)
+* Layered System
+* Code-on-demand
+* Statelessness
 
-### How do we measure API?
+### How Do We Measure API?
 
-<img src="https://dev-to-uploads.s3.amazonaws.com/i/aregpuzds2v57k4shgpa.PNG">
+![Measuring API](https://dev-to-uploads.s3.amazonaws.com/i/aregpuzds2v57k4shgpa.PNG)
 
 #### Richardson Maturity Model
 
-- https://restfulapi.net/richardson-maturity-model/
-- https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
-- https://martinfowler.com/articles/richardsonMaturityModel.html
+* https://restfulapi.net/richardson-maturity-model/
+* https://blog.restcase.com/4-maturity-levels-of-rest-api-design/
+* https://martinfowler.com/articles/richardsonMaturityModel.html
 
 ### Partial Response
 
-partial response is a method that lets API users to choose what information they want in the response.
+Partial response allows API users to specify which fields they want in the response.
 
 ```py
 GET - http://127.0.0.1:8000/api/v1/products?fields=name,photo,price
@@ -98,23 +100,23 @@ GET - http://127.0.0.1:8000/api/v1/products?fields=name,photo,price
 
 #### Benefits
 
-- Reduce bandwidth wage
-- Improved Performance
-- Optimized client-side performance
-- Simplified API Consumption
-- Reduced over-fetching
+* Reduces bandwidth usage
+* Improves performance
+* Optimizes client-side performance
+* Simplifies API consumption
+* Reduces over-fetching
 
 ### Query Parameters
 
 Query parameters are a fundamental aspect of HTTP requests used to specify additional information for a resource retrieval or manipulation operation. They are appended to the URL of the request and consist of a key-value pair separated by an equal sign (=) and delimited by an ampersand (&) if multiple parameters are present.
 
-- filtering: `?min_price=600&max_price=1200`
-- Sorting: `?sort=price&order=desc`
-- Searching: `?search=iphone`
-- Pagination: `?limit=10&offset=1`
-- Partial Fields: `?fields=name,product,price`
+* **Filtering**: `?min_price=600&max_price=1200`
+* **Sorting**: `?sort=price&order=desc`
+* **Searching**: `?search=iphone`
+* **Pagination**: `?limit=10&offset=1`
+* **Partial Fields**: `?fields=name,product,price`
 
-### Well structured response body
+### Well-Structured Response Body
 
 #### GET
 
@@ -155,62 +157,60 @@ Query parameters are a fundamental aspect of HTTP requests used to specify addit
 }
 ```
 
-#### GET all Products
+#### GET All Products
 
 ```py
-"status": 200,
-"message": "",
-"information": "",
-"data": [
-	{
-		"id": "uuid",
-		"links": {
-			"self": ...,
+{
+	"status": 200,
+	"message": "",
+	"information": "",
+	"data": [
+		{
+			"id": "uuid",
+			"links": {
+				"self": "..."
+			}
 		}
-	},
-	{
-
-	}
-],
-"pagination": {
+	],
+	"pagination": {
 		"offset": 5,
 		"limit": 2,
 		"total_pages": 20,
 		"total_items": 100,
-		"links": [
-			"self": ...,
-			"first": ...,
-			"last": None,
+		"links": {
+			"self": "...",
+			"first": "...",
+			"last": null,
 			"prev": 1,
 			"next": 3
-		]
+		}
 	}
+}
 ```
 
 ## Error Response
 
-- Use standard HTTP status code
-	- 400 - Bad request
-	- 401 - Unauthorized
-	- 403 - Forbidden
-	- 404 - Not found
-	- 422 - Unprocessable Content
-	- 500 - Internal server error
-- Provide descriptive error message
-- Follow a consistent error message
-- Include error details
-- Follow a consistent error format
-- Include error details
-- Handle uncaught exceptions gracefully
-- Offer guidance for recovery
-- Response body should includes
-	- code
-	- message
-	- hints
-	- trace_id
+* Use Standard HTTP Status Codes
+	* 400 - Bad request
+	* 401 - Unauthorized
+	* 403 - Forbidden
+	* 404 - Not found
+	* 422 - Unprocessable Content
+	* 500 - Internal server error
+* Provide Descriptive Error Messages
+* Follow a Consistent Error Message Format
+* Include Error Details
+* Handle Uncaught Exceptions Gracefully
+* Offer Guidance for Recovery
+* Response Body Should Includes
+	* code
+	* message
+	* hints
+	* trace_id
 
 ```py
 {
+	"data": {},
 	"message": ...,
 	"errors": [],
 	"hints": "",
@@ -220,28 +220,24 @@ Query parameters are a fundamental aspect of HTTP requests used to specify addit
 
 ## HTTP Cache-Control
 
-![cache](https://i.ibb.co/wsV27C4/image.png)
+![Cache-Control](https://i.ibb.co/wsV27C4/image.png)
 
 ### Directives
 
-- Max-Age: Specifies the maximum time (in seconds) that a response can be cached by the client or intermediary caches.
-	- For example, **Cache-Control: max-age=3600** indicates that the response can be cached for up to one hour.
-- S-Max-Age: Similar to max-age, but applies only to shared caches (e.g., proxies). It overrides the max-age directive for shared caches.
-	- For example, **Cache-Control: s-maxage=3600** specifies that shared caches can cache the response for one hour.
-- No-Cache: Indicates that a response can be cached by the client or intermediary caches, but must be re-validated with the server before each use. It does not prevent caching but requires validation of the cached response's freshness. For example, **Cache-Control: no-cache**.
-- No-Store: Specifies that a response should not be stored in any cache, including browser caches and intermediary caches. It instructs clients to fetch the response from the server for each request. For example, **Cache-Control: no-store**. Sensitive data should not be stored anywhere (e.g., Banking data, Medical record)
+* **Max-Age**: Specifies the maximum time (in seconds) that a response can be cached. For example, `Cache-Control: max-age=3600` allows caching for one hour.
+* **S-Max-Age**: Similar to max-age, but applies only to shared caches and overrides max-age. For example, `Cache-Control: s-maxage=3600` specifies that shared caches can cache the response for one hour.
+* **No-Cache**: Allows caching but requires revalidation with the server before each use. For example, `Cache-Control: no-cache`.
+* **No-Store**: Specifies that a response should not be stored in any cache, including browser caches and intermediary caches. For example, `Cache-Control: no-store`. Sensitive data should not be cached.
 
 ### Public Cache
 
-Specifies that a response can be cached by any cache, including both private (client-side) caches and shared caches (e.g., proxies).Sensitive data should not be cached.  
-For example, Cache-Control: public.
+Allows caching by any cache, including client-side and shared caches. Sensitive data should not be cached. For example, `Cache-Control: public`.
 
 ![public](https://i.ibb.co/G3DqJK4/image.png)
 
 ### Private Cache
 
-Indicates that a response can be cached by the client's browser but not by shared caches. It is typically used for responses intended for a specific user or client.  
-For example, Cache-Control: private.
+Allows caching only by the client's browser and not by shared caches. Typically used for responses intended for a specific user. For example, `Cache-Control: private`.
 
 ![private](https://i.ibb.co/qRDYqSm/image.png)
 
@@ -253,45 +249,45 @@ The primary purpose of the Etag header is to provide a lightweight and efficient
 
 #### Steps
 
-- Etag Generation: When a client creates a new resource server generates an Etag value for the current version of the resource.
-- Inclusion in Response: Server includes the Etag value in response headers using Etag header.
-- Storage by Client: The client save (cache, local storage) the response along with the Etag value for future reference.
-- Conditional Requests: When the client makes a subsequent request for the resource, it includes the stored Etag value in the `If-None-Match` header of the request. For example: `If-None-Match: "abcdef123456"`
-- Validation by Server: Upon receiving the request, server compares the Etag value provided by the client with the current Etag value of the resource. If the Etag values match, it indicates that the cached representation is still valid, and the server responds with a `304 Not Modified` status code, indicating that the client should use its cached copy. If the Etag values do not match, the server responds with the full resource content, along with a new Etag value for the updated version.
+* **Etag Generation**: When a client creates a new resource server generates an Etag value for the current version of the resource.
+* **Inclusion in Response**: The server includes the Etag value in response headers using the `Etag` header.
+* **Storage by Client**: The client stores the response along with the Etag value.
+* **Conditional Requests**: The client includes the stored Etag value in the `If-None-Match` header of subsequent requests. For example, `If-None-Match: "abcdef123456"`.
+* **Validation by Server**: Upon receiving the request, server compares the Etag value provided by the client with the current Etag value of the resource. If the Etag values match, it indicates that the cached representation is still valid, and the server responds with a `304 Not Modified` status code, indicating that the client should use its cached copy. If the Etag values do not match, the server responds with the full resource content, along with a new Etag value for the updated version.
 
 ![Etag](https://i.ibb.co/WnZbYQM/Capture3.png)
 
 ## REST API Versioning
 
-REST API versioning helps to iterate faster when the required, breaking or non-breaking, changes are identified.
+REST API versioning helps manage changes and updates to APIs while maintaining backward compatibility.
 
 ### Benefits
 
-- Backward Compatibility
-- Incremental Updates
-- Flexibility
-- Maintainability
-- Documentation and Communication
+* Backward Compatibility
+* Incremental Updates
+* Flexibility
+* Maintainability
+* Documentation and Communication
 
-### Examples of Breaking Change
+### Examples of Breaking Changes
 
-- Changing the URI structure of an existing API endpoint
-	- Before: `GET /api/v1/product/{id}`
-	- After: `GET /api/v1/products/{id}`
-	- This change could break existing client implementations that rely on the
+* Changing the URI structure of an existing API endpoint
+	* Before: `GET /api/v1/product/{uid}`
+	* After: `GET /api/v1/products/{uid}`
+* This change could break existing client implementations that rely on the
 old URI structure, causing requests to fail with `404 Not Found` errors.
-- Modifying the behavior of existing API methods or endpoints in a way that affects client applications.
+* Modifying the behavior of an existing API methods or endpoints in a way that affects client applications.
 
 ### Versioning of Breaking Change
 
-- URL Based
-- Header Based
+* **URL-Based**: Including the version number in the URL.
+* **Header-Based**: Including the version number in request headers.
 
-### Examples of Non-breaking Change
+### Examples of Non-Breaking Changes
 
-- Adding a new endpoints
-- Optimizing Performance
-- Adding a new field to the product representation
+* Adding New Endpoints
+* Optimizing Performance
+* Adding New Fields
 
 ```py
 # Before
@@ -307,106 +303,105 @@ old URI structure, causing requests to fail with `404 Not Found` errors.
 }
 ```
 
-### Best Practices of Handling API Changes
+### Best Practices for Handling API Changes
 
-- Versioning strategy
-	- URL
-	- Header
-- API Documentation
-- Backward Compatibility
-- Graceful Deprecation
-- Monitoring & Feedback
+* Versioning Strategy
+	* Choose URL or header-based versioning.
+* API Documentation
+* Backward Compatibility
+* Graceful Deprecation
+* Monitoring & Feedback
 
 ## REST API Specification
 
-The "REST API Specification" ensures that there is a clear and well-defined contract between these two parties, In the "REST API Specification," we follow two types of contracts:
+The REST API Specification ensures a clear and well-defined contract between the producer and consumer.  In the "REST API Specification," we follow two types of contracts:
 
-- Contract-last, also known as the Code-first approach. 
-- Contract-first, also known as the Design-first approach.
+* **Contract-Last (Code-First)**: Developing the API before creating the contract.
+* **Contract-First (Design-First)**: Designing the API contract before implementation.
 
 ### Open API Specification
 
-- [OpenAPI Specification v3.1.0](https://spec.openapis.org/oas/latest.html)
-- [Swagger Editor](https://editor.swagger.io/)
+* [OpenAPI Specification v3.1.0](https://spec.openapis.org/oas/latest.html)
+* [Swagger Editor](https://editor.swagger.io/)
 
 ## REST API Security
 
-API security is the practice of preventing and mitigating attacks that originate at the API level and it is a crucial pillar of any organization's overall security.
+API security involves protecting APIs from various threats and ensuring safe interactions.
 
 ### Common API Threats and Vulnerabilities
 
-- Poor security hygiene
-- Authentication & Authorization Vulnerabilities
-- Lack of read and write granularity
-- Failure to implement quotas and throttling
-- Improperly set or missing HTTP headers
-- Failure to perform input validation, sanitation and encoding in the method level
+* Poor security hygiene
+* Authentication & Authorization Vulnerabilities
+* Lack of Read and Write Granularity
+* Failure to Implement Quotas and Throttling
+* Improperly Set or Missing HTTP Headers
+* Failure to Perform Input Validation, Sanitization, and Encoding in the method level.
 
-### How to secure REST API?
+### Securing REST API
 
-- Authentication
-	- Basic authentication
-	- Session Authentication
-	- JWT
-	- API Key
-	- Oauth 2.0
-		- Grant types
-			- Authorization code
-			- Implicit grand
-			- Authorization code grant with proof key for code exchange
-			- Resource owner credentials
-			- Client credentials
-			- Device authorization flow
-			- Refresh token grant
-- Authorization
-- Input validation and sanitation
-- Rate limiting
-- Security headers
-- Logging and continuous monitoring
+* Authentication
+	* Basic authentication
+	* Session Authentication
+	* JWT (JSON Web Tokens)
+	* API Key
+	* Oauth 2.0
+		* Grant Types
+			* Authorization Code
+			* Implicit Grant
+			* Authorization Code Grant with Proof Key for Code Exchange
+			* Resource Owner Credentials
+			* Client Credentials
+			* Device Authorization Flow
+			* Refresh Token Grant
+* Authorization
+* Input Validation and Sanitization
+* Rate Limiting
+* Security Headers
+* Logging and Continuous Monitoring
 
 ### Access Control Best Practices
 
-- Implement RBAC
-- Throttle requests
-- Use HTTPs
-- Use UUID over incremental ID
+* Implement RBAC (Role-Based Access Control)
+* Throttle Requests
+* Use HTTPS
+* Use UUIDs over Incremental IDs
 
 ### Input Data Validation
 
-- Use Proper HTTP Methods
-- Validate Content-type on request header
-- Validate & sanitize request body
-- Avoid sending sensitive data in the query parameters
-- Use only secure server side encryption.
+* Use Proper HTTP Methods
+* Validate `Content-Type` in Request Headers
+* Validate and Sanitize Request Body
+* Avoid Sending Sensitive Data in Query Parameters
+* Use Secure Server-Side Encryption
 
 ### Security Headers
 
-- Content-Security-Policy: A powerful allow-list of what can happen on your page which mitigates many attacks Cross-Origin-Opener-Policy: Helps process-isolate your page
-- Cross-Origin-Resource-Policy: Blocks others from loading your resources cross-origin
-- Origin-Agent-Cluster: Changes process isolation to be origin-based
-- Referrer-Policy: Controls the Referer header
-- Strict-Transport-Security: Tells browsers to prefer HTTPS
-- X-Content-Type-Options: Avoids MIME sniffing
-- X-DNS-Prefetch-Control: Controls DNS prefetching
-- X-Download-Options: Forces downloads to be saved (Internet Explorer only)
-- X-Frame-Options: Legacy header that mitigates clickjacking attacks
-- X-Permitted-Cross-Domain-Policies: Controls cross-domain behavior for Adobe products, like Acrobat
-- X-Powered-By: Info about the web server. Remove because it could be used in simple attacks
-- X-XSS-Protection: Legacy header that tries to mitigate XSS attacks, but makes things worse, so Helmet disables it
+* **Content-Security-Policy**: A powerful allow-list of what can happen on your page which mitigates many attacks Cross-Origin-Opener-Policy: Helps process-isolate your page
+* **Cross-Origin-Resource-Policy**: Blocks others from loading your resources cross-origin
+* **Origin-Agent-Cluster**: Changes process isolation to be origin-based
+* **Referrer-Policy**: Controls the Referer header
+* **Strict-Transport-Security**: Tells browsers to prefer HTTPS
+* **X-Content-Type-Options**: Avoids MIME sniffing
+* **X-DNS-Prefetch-Control**: Controls DNS prefetching
+* **X-Download-Options**: Forces downloads to be saved (Internet Explorer only)
+* **X-Frame-Options**: Legacy header that mitigates clickjacking attacks
+* **X-Permitted-Cross-Domain-Policies**: Controls cross-domain behavior for Adobe products, like Acrobat
+* **X-Powered-By**: Info about the web server. Remove because it could be used in simple attacks
+* **X-XSS-Protection**: Legacy header that tries to mitigate XSS attacks, but makes things worse, so Helmet disables it
 
 ## API Management
 
 API management is the organized control of APIs throughout their life cycle, including design, deployment, security, monitoring and monetization.
 
-- Design
-- Development
-- Deployment
-- API monitoring and analytics
-- Documentation and developer portals
-- Life cycle management
-- Monetization & Billing
+* Design
+* Development
+* Deployment
+* API monitoring and analytics
+* Documentation and Developer Portals
+* Lifecycle Management
+* Monetization & Billing
 
-2 types of API management tools
+### Types of API Management Tools
 
-- Proxy-Based
-- Agent-Based
+* Proxy-Based
+* Agent-Based
